@@ -2,6 +2,7 @@ import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import dotenv from "dotenv";
+import "hardhat-deploy";
 import "hardhat-gas-reporter";
 import "hardhat-packager";
 import { HardhatUserConfig } from "hardhat/config";
@@ -141,6 +142,10 @@ const config: HardhatUserConfig = {
   packager: {
     contracts: ["Greeter"],
     includeFactories: true,
+  },
+
+  namedAccounts: {
+    deployer: 0,
   },
 };
 

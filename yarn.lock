@@ -1188,8 +1188,8 @@ __metadata:
     "@ethersproject/abi": ^5.5.0
     "@ethersproject/bytes": ^5.5.0
     "@ethersproject/providers": ^5.5.2
-    "@nomiclabs/hardhat-ethers": ^2.0.4
-    "@nomiclabs/hardhat-waffle": ^2.0.2
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.11"
+    "@nomiclabs/hardhat-waffle": ^2.0.3
     "@swc/cli": ^0.1.55
     "@swc/core": ^1.2.133
     "@swc/helpers": ^0.3.2
@@ -1256,19 +1256,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nomiclabs/hardhat-ethers@npm:^2.0.4":
-  version: 2.0.4
-  resolution: "@nomiclabs/hardhat-ethers@npm:2.0.4"
+"@nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers@^0.3.0-beta.11":
+  version: 0.3.0-beta.13
+  resolution: "hardhat-deploy-ethers@npm:0.3.0-beta.13"
   peerDependencies:
     ethers: ^5.0.0
     hardhat: ^2.0.0
-  checksum: 46b01edde014f5484c38ab199531e6a742d93a1a5fd60576fed97231a1ce325607c7ead6b6be8fd7b64aff55daa0a388c691b45a69cb63ae28db4087f281f573
+  checksum: 45206bf8d088cda08822ecf79d73e4027d8a4777cc23c3ef94568e316c45b8597130d72826fb2417edd32fe4b3dc54097161bef577663769b5c47b8262b983bb
   languageName: node
   linkType: hard
 
-"@nomiclabs/hardhat-waffle@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "@nomiclabs/hardhat-waffle@npm:2.0.2"
+"@nomiclabs/hardhat-waffle@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "@nomiclabs/hardhat-waffle@npm:2.0.3"
   dependencies:
     "@types/sinon-chai": ^3.2.3
     "@types/web3": 1.0.19
@@ -1277,7 +1277,7 @@ __metadata:
     ethereum-waffle: ^3.2.0
     ethers: ^5.0.0
     hardhat: ^2.0.0
-  checksum: 7a14520b4ecbf77e01744c20ed95a9fc8000107be09bc8c0ef3f5edc2413157ad20b460c877c55774238b76d53ad5d1721119bccc3ad66bffad9d30fad1806dd
+  checksum: e68c9e13905caa54a10fa68d9ad7dc905c86469c879f91e999a1c4d039dd2f9fa43a8ed90ab975afb14a79cd6badeb60a7cf50dc6564660edd192614c55875ca
   languageName: node
   linkType: hard
 
