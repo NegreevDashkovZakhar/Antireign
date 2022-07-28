@@ -30,6 +30,6 @@ contract PixelTroopCard is ERC721, Ownable {
     }
 
     function _baseURI() internal view virtual override returns (string memory) {
-        return "https://gateway.pinata.cloud/ipfs/QmPyujjguqH9pZLthhPomuKJJpGKvQSf5YKbsdvgjrSoUC/";
+        return "https://gateway.pinata.cloud/ipfs/QmbPDhokjPE7RLXLf4KbMAEc2fARww2kqgrw1pbKmcnc2N/";
     }
 }
