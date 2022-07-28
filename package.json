@@ -12,6 +12,7 @@
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.11",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.7.1",
     "@swc/cli": "^0.1.55",
     "@swc/core": "^1.2.133",
     "@swc/helpers": "^0.3.2",
@@ -91,6 +92,8 @@
   },
   "repository": "github:gulitsky/solidity-template",
   "scripts": {
+    "deploy-goerli": "npx hardhat run --network goerli ./deploy/pixelTroopCard.ts",
+    "deploy-rinkeby": "npx hardhat run --network rinkeby ./deploy/pixelTroopCard.ts",
     "build": "hardhat compile",
     "bundle:cjs": "spack",
     "clean": "shx rm -rf ./artifacts/ ./cache/ ./coverage/ ./dist/ ./coverage.json ./gasReporterOutput.json ./gas-profile-report.txt ./test-results.xml ./tsconfig.prod.tsbuildinfo",
