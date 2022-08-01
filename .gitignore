@@ -36,3 +36,5 @@ gas-profile-report.txt
 
 # JUnit report
 test-results.xml
+
+/generation/output/
