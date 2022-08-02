@@ -2,7 +2,9 @@ import { ethers } from "hardhat";
 
 async function main() {
   const contractFactory = await ethers.getContractFactory("PixelTroopCard");
-  const contract = await contractFactory.deploy();
+  const contract = await contractFactory.deploy({
+    args: [""],
+  });
 
   await contract.deployed();
 
