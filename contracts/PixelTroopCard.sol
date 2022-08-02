@@ -5,6 +5,8 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
+error InsufficientBalance(uint256 required, uint256 sent);
+
 contract PixelTroopCard is ERC721, Ownable {
     using Strings for uint256;
     using Counters for Counters.Counter;
@@ -17,7 +19,8 @@ contract PixelTroopCard is ERC721, Ownable {
     }
 
     function mint() public payable returns (uint256) {
-        require(msg.value > 100 gwei, "Insufficient balance");
+        if (msg.value < 100 gwei) revert InsufficientBalance({required: 100 gwei, sent: msg.value});
+
         _tokenIds.increment();
 
         uint256 newItemId = _tokenIds.current();
