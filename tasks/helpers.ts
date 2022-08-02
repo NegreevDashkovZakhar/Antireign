@@ -1,10 +1,6 @@
 import { Contract, ethers, Wallet } from "ethers";
 import { getContractAt } from "@nomiclabs/hardhat-ethers/internal/helpers";
-import {
-  BaseProvider,
-  InfuraProvider,
-  Provider,
-} from "@ethersproject/providers";
+import { Provider } from "@ethersproject/providers";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 
 // Helper method for fetching environment variables from .env
