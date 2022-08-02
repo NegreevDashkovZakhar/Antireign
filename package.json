@@ -94,6 +94,8 @@
   "scripts": {
     "deploy-goerli": "npx hardhat run --network goerli ./deploy/pixelTroopCard.ts",
     "deploy-rinkeby": "npx hardhat run --network rinkeby ./deploy/pixelTroopCard.ts",
+    "mint": "hardhat mint --address 0x77902aE0C4C32fa4d3AB400fB8F15abcF427526B --network rinkeby",
+    "setUri": "hardhat setUri --network rinkeby",
     "build": "hardhat compile",
     "bundle:cjs": "spack",
     "clean": "shx rm -rf ./artifacts/ ./cache/ ./coverage/ ./dist/ ./coverage.json ./gasReporterOutput.json ./gas-profile-report.txt ./test-results.xml ./tsconfig.prod.tsbuildinfo",
