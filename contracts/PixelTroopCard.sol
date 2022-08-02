@@ -10,7 +10,11 @@ contract PixelTroopCard is ERC721, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    constructor() ERC721("PixelTroops", "PXT") {}
+    string private baseUri;
+
+    constructor(string memory _baseUri) ERC721("PixelTroops", "PXT") {
+        baseUri = _baseUri;
+    }
 
     function mint() public payable returns (uint256) {
         require(msg.value > 100 gwei, "Insufficient balance");
@@ -26,6 +30,10 @@ contract PixelTroopCard is ERC721, Ownable {
         payable(msg.sender).transfer(address(this).balance);
     }
 
+    function setBaseUri(string memory newBaseUri) public onlyOwner {
+        baseUri = newBaseUri;
+    }
+
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
         _requireMinted(tokenId);
 
@@ -35,6 +43,6 @@ contract PixelTroopCard is ERC721, Ownable {
     }
 
     function _baseURI() internal view virtual override returns (string memory) {
-        return "https://gateway.pinata.cloud/ipfs/QmbPDhokjPE7RLXLf4KbMAEc2fARww2kqgrw1pbKmcnc2N/";
+        return baseUri;
     }
 }
