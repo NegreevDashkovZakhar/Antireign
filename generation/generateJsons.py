@@ -2,7 +2,7 @@ import json
 import random
 
 abilitiesDictionary = dict(
-    Archer="Attack distance", Knight="Shield protection", Healer="Heal amount"
+    Archer="Shoot", Knight="Defense", Healer="Heal"
 )
 
 FIRST_NAMES = [
@@ -52,10 +52,10 @@ LAST_NAMES = [
 
 
 IMAGE_BASE_URL = (
-    "https://gateway.pinata.cloud/ipfs/QmSs8inkakFyLv7HPYFpKrphabm9vu1DrjzAHtn1g669xv/"
+    "https://gateway.pinata.cloud/ipfs/QmTaAKME8MrRvQjrg3LwmGztMcsCiTEn5qT9345MLUFg9Q/"
 )
 
-jsonCount = 72
+jsonCount = 50
 
 
 def createJsons():
@@ -99,32 +99,34 @@ def generateJson(tokenId):
         special = baseSpecial + random.randint(
             (level - 1) * specialBoostIndex, level * specialBoostIndex
         )
+        _add_attribute(attributes, "Shot distance", special)
+
     elif troopClass == "Knight":
         baseSpecial = 5
         specialBoostIndex = 3
         special = baseSpecial + random.randint(
             (level - 1) * specialBoostIndex, level * specialBoostIndex
         )
+        _add_attribute(attributes, "Shield level", special)
     elif troopClass == "Healer":
         baseSpecial = 10
         specialBoostIndex = 5
         special = baseSpecial + random.randint(
             (level - 1) * specialBoostIndex, level * specialBoostIndex
         )
+        _add_attribute(attributes, "Heal amount", special)
 
     _add_attribute(attributes, "Level", level, "number")
     _add_attribute(attributes, "Health", health, "number")
     _add_attribute(attributes, "Damage", damage, "number")
     _add_attribute(attributes, "Class", troopClass)
     _add_attribute(attributes, "Special ability", abilitiesDictionary.get(troopClass))
-    _add_attribute(attributes, "Special ability power", special)
     with open("output/jsons/%s.json" % tokenId, "w") as file:
         json.dump(
             {
                 "name": troopName,
                 "description": "Brave pixel troop named %s." % troopName,
                 "image": image_url,
-                # 'external_url': 'https://openseacreatures.io/%s' % tokenId,
                 "attributes": attributes,
             },
             file,
