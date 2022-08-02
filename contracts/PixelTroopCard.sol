@@ -12,7 +12,8 @@ contract PixelTroopCard is ERC721, Ownable {
 
     constructor() ERC721("PixelTroops", "PXT") {}
 
-    function mint() public returns (uint256) {
+    function mint() public payable returns (uint256) {
+        require(msg.value > 100 gwei, "Insufficient balance");
         _tokenIds.increment();
 
         uint256 newItemId = _tokenIds.current();
