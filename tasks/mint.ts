@@ -7,6 +7,7 @@ task("mint", "Mints from the NFT contract")
     const contract = await getContract("PixelTroopCard", hre);
     const transactionResponse = await contract.mint({
       gasLimit: 500_000,
+      value: 100000000000,
     });
     console.log(`Transaction Hash: ${transactionResponse.hash}`);
   });
