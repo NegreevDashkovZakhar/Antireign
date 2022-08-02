@@ -22,6 +22,10 @@ contract PixelTroopCard is ERC721, Ownable {
         return newItemId;
     }
 
+    function withdraw() public onlyOwner {
+        payable(msg.sender).transfer(address(this).balance);
+    }
+
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
         _requireMinted(tokenId);
 
