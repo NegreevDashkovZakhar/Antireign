@@ -1,6 +1,6 @@
-import { Contract, ethers, Wallet } from "ethers";
-import { getContractAt } from "@nomiclabs/hardhat-ethers/internal/helpers";
 import { Provider } from "@ethersproject/providers";
+import { getContractAt } from "@nomiclabs/hardhat-ethers/internal/helpers";
+import { Contract, ethers, Wallet } from "ethers";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 
 // Helper method for fetching environment variables from .env
@@ -16,7 +16,7 @@ function getEnvVariable(key: string, defaultValue: any): any {
 
 // Helper method for fetching a connection provider to the Ethereum network
 function getProvider(): Provider {
-  return new ethers.providers.InfuraProvider("rinkby", {
+  return ethers.getDefaultProvider("rinkeby", {
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/${getEnvVariable(
         "INFURA_PROJECT_ID",
