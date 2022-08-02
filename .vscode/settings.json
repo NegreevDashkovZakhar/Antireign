@@ -44,5 +44,6 @@
   "solidity.packageDefaultDependenciesDirectory": "./node_modules/",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.tsdk": "./node_modules/typescript/lib/",
-  "solidity.compilerOptimization": 800
+  "solidity.compilerOptimization": 800,
+  "python.formatting.provider": "black"
 }

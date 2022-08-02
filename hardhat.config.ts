@@ -2,6 +2,7 @@ import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import dotenv from "dotenv";
+import "hardhat-deploy";
 import "hardhat-gas-reporter";
 import "hardhat-packager";
 import { HardhatUserConfig } from "hardhat/config";
@@ -14,10 +15,11 @@ const {
   COIN_MARKET_CAP_API_KEY = "d25b5576-a4ee-41be-bb2b-aca2ba3ae5d8",
   ETHERSCAN_API_KEY,
   INFURA_PROJECT_ID = "84842078b09946638c03157f83405213",
-  MNEMONIC = "overn merry manual oil detail fit pair boat possible pitch icon donkey",
   REPORT_GAS = "false",
-  SOLIDITY_VERSION = "0.8.11",
+  SOLIDITY_VERSION = "0.8.15",
 } = process.env;
+
+const MNEMONIC = process.env.MNEMONIC;
 
 if (!MNEMONIC) {
   console.error(
@@ -141,6 +143,10 @@ const config: HardhatUserConfig = {
   packager: {
     contracts: ["Greeter"],
     includeFactories: true,
+  },
+
+  namedAccounts: {
+    deployer: 0,
   },
 };
 
