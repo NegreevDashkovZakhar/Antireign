@@ -41,8 +41,7 @@ contract PixelTroopCard is ERC721, Ownable {
         _requireMinted(tokenId);
 
         string memory baseURI = _baseURI();
-
-        return string(abi.encodePacked(baseURI, tokenId.toString(), ".json"));
+        return string.concat(baseURI, tokenId.toString(), ".json");
     }
 
     function _baseURI() internal view virtual override returns (string memory) {
