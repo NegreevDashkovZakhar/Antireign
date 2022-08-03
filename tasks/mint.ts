@@ -1,5 +1,5 @@
 import { task } from "hardhat/config";
-import { getContract } from "./helpers";
+import { getContract } from "./rinkebyHelpers";
 
 task("mint", "Mints from the NFT contract")
   .addParam("address", "The address to receive a token")

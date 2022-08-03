@@ -1,5 +1,5 @@
 import { task } from "hardhat/config";
-import { getContract } from "./helpers";
+import { getContract } from "./rinkebyHelpers";
 
 task("setUri", "Sets new base uri for ")
   .addParam("uri", "new contract base uri")
