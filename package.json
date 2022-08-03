@@ -1,6 +1,6 @@
 {
-  "author": "Andrey Gulitsky <andrey@gulisky.dev> (https://gulitsky.dev)",
-  "bugs": "https://github.com/gulitsky/solidity-template/issues",
+  "author": "Negreev-Dashkov Zakhar <negreevdashkov.zakhar@gmail.com>",
+  "bugs": "https://github.com/NegreevDashkovZakhar/PixelTroops/issues",
   "dependencies": {
     "@ethersproject/abi": "^5.5.0",
     "@ethersproject/bytes": "^5.5.0",
@@ -72,7 +72,7 @@
     "./dist/**/*.js.map",
     "./CHANGELOG.md"
   ],
-  "homepage": "https://github.com/gulitsky/solidity-template#readme",
+  "homepage": "https://github.com/NegreevDashkovZakhar/PixelTroops#readme",
   "imports": {
     "#types/*": ""
   },
@@ -85,7 +85,7 @@
   ],
   "license": "ISC",
   "main": "./dist/index.cjs",
-  "name": "@gulitsky/solidity-template",
+  "name": "@NegreevDashkovZakhar/PixelTroops",
   "packageManager": "yarn@3.1.1",
   "publishConfig": {
     "access": "public"

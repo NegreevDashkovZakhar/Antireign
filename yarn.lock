@@ -5,6 +5,55 @@ __metadata:
   version: 5
   cacheKey: 8
 
+"@NegreevDashkovZakhar/PixelTroops@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@NegreevDashkovZakhar/PixelTroops@workspace:."
+  dependencies:
+    "@ethersproject/abi": ^5.5.0
+    "@ethersproject/bytes": ^5.5.0
+    "@ethersproject/providers": ^5.5.2
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.11"
+    "@nomiclabs/hardhat-waffle": ^2.0.3
+    "@openzeppelin/contracts": ^4.7.1
+    "@swc/cli": ^0.1.55
+    "@swc/core": ^1.2.133
+    "@swc/helpers": ^0.3.2
+    "@typechain/ethers-v5": ^9.0.0
+    "@typechain/hardhat": ^4.0.0
+    "@types/chai": ^4.3.0
+    "@types/fs-extra": ^9.0.13
+    "@types/is-ci": ^3.0.0
+    "@types/mocha": ^9.1.0
+    "@types/node": ^17.0.11
+    chai: ^4.3.4
+    dotenv: ^14.3.0
+    ethereum-waffle: ^3.4.0
+    ethers: ^5.5.3
+    fs-extra: ^10.0.0
+    hardhat: ^2.8.3
+    hardhat-deploy: ^0.9.28
+    hardhat-gas-reporter: ^1.0.7
+    hardhat-packager: ^1.2.1
+    husky: ^7.0.4
+    is-ci: ^3.0.1
+    lint-staged: ^12.3.1
+    live-server: ^1.2.1
+    mocha: ^9.2.0
+    mocha-junit-reporter: ^2.0.2
+    pinst: ^2.1.6
+    prettier: ^2.5.1
+    prettier-plugin-solidity: ^1.0.0-beta.19
+    shx: ^0.3.4
+    solhint: ^3.3.6
+    solhint-plugin-prettier: ^0.0.5
+    solidity-coverage: ^0.7.18
+    ts-node: ^10.4.0
+    tslib: ^2.3.1
+    typechain: ^7.0.0
+    typescript: ~4.5.5
+  languageName: unknown
+  linkType: soft
+
 "@babel/code-frame@npm:^7.0.0":
   version: 7.14.5
   resolution: "@babel/code-frame@npm:7.14.5"
@@ -1180,55 +1229,6 @@ __metadata:
   checksum: d05081e0887a49c178b75ee3067bd6ee086f73c154d121b854fb2e044e8a89cb1cbb6de3a0dd93a519b80f0531fda68b099dd7256205f7fbb3490324342f2217
   languageName: node
   linkType: hard
-
-"@gulitsky/solidity-template@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@gulitsky/solidity-template@workspace:."
-  dependencies:
-    "@ethersproject/abi": ^5.5.0
-    "@ethersproject/bytes": ^5.5.0
-    "@ethersproject/providers": ^5.5.2
-    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.11"
-    "@nomiclabs/hardhat-waffle": ^2.0.3
-    "@openzeppelin/contracts": ^4.7.1
-    "@swc/cli": ^0.1.55
-    "@swc/core": ^1.2.133
-    "@swc/helpers": ^0.3.2
-    "@typechain/ethers-v5": ^9.0.0
-    "@typechain/hardhat": ^4.0.0
-    "@types/chai": ^4.3.0
-    "@types/fs-extra": ^9.0.13
-    "@types/is-ci": ^3.0.0
-    "@types/mocha": ^9.1.0
-    "@types/node": ^17.0.11
-    chai: ^4.3.4
-    dotenv: ^14.3.0
-    ethereum-waffle: ^3.4.0
-    ethers: ^5.5.3
-    fs-extra: ^10.0.0
-    hardhat: ^2.8.3
-    hardhat-deploy: ^0.9.28
-    hardhat-gas-reporter: ^1.0.7
-    hardhat-packager: ^1.2.1
-    husky: ^7.0.4
-    is-ci: ^3.0.1
-    lint-staged: ^12.3.1
-    live-server: ^1.2.1
-    mocha: ^9.2.0
-    mocha-junit-reporter: ^2.0.2
-    pinst: ^2.1.6
-    prettier: ^2.5.1
-    prettier-plugin-solidity: ^1.0.0-beta.19
-    shx: ^0.3.4
-    solhint: ^3.3.6
-    solhint-plugin-prettier: ^0.0.5
-    solidity-coverage: ^0.7.18
-    ts-node: ^10.4.0
-    tslib: ^2.3.1
-    typechain: ^7.0.0
-    typescript: ~4.5.5
-  languageName: unknown
-  linkType: soft
 
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
